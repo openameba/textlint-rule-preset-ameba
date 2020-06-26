@@ -1,0 +1,49 @@
+version: 1
+
+rules:
+  - expected: アメーバID
+    pattern:  /amebaid/i
+
+  - expected: Amebaブログ
+    patterns:
+      - あめーばぶろぐ
+      - アメーバブログ
+      - アメーバblog
+  
+  - expected: アメブロ
+    pattern: /ameblo/i
+
+  - expected: 芸能人・有名人ブログ
+    patterns:
+      - オフィシャルブログ
+      - 著名人ブログ
+      - 有名人ブログ
+  
+  - expected: 公式トップブロガー
+    pattern: トップブロガー
+
+  - expected: ABEMA
+    patterns:
+      - AmebaTV
+      - あべま
+      - アベマ
+
+  - expected: Ownd
+    patterns:
+      - ownd
+      - オウンド
+
+  - expected: REQU
+    patterns:
+      - requ
+      - リキュウ
+
+  - expected: Ameba Pay
+    patterns: 
+      - ameba pay
+      - アメペイ
+
+  - expected: ドットマネー
+    patterns: 
+      - ドマネ
+      - どまね
