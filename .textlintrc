@@ -2,7 +2,7 @@
   "rules" : {
     "prh" : {
       "rulePaths": [
-        "./rule/prh-ameba.yml"
+        "./lib/prh-ameba.yml"
       ]
     }
   }

@@ -2,10 +2,10 @@
   "name": "textlint-rule-preset-ameba",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/textlint-rule-preset-ameba.js",
   "scripts": {
     "test": "npx textlint example/ameba.md",
-    "lint": "yamllint rule/*.yml"
+    "lint": "yamllint lib/*.yml"
   },
   "author": "Ameba Developers<>",
   "license": "MIT",
