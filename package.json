@@ -5,7 +5,7 @@
   "main": "lib/textlint-rule-preset-ameba.js",
   "scripts": {
     "test": "npx textlint example/ameba.md",
-    "lint": "yamllint lib/*.yml"
+    "lint": "yamllint lib/*.yml .github/workflows/*.yml"
   },
   "author": "Ameba Developers",
   "license": "MIT",
