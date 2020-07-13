@@ -3,47 +3,101 @@ version: 1
 rules:
   - expected: アメーバID
     pattern:  /amebaid/i
+    specs:
+      - from: amebaid
+        to: アメーバID
+      - from: AMEBAID
+        to: アメーバID
 
   - expected: Amebaブログ
     patterns:
       - あめーばぶろぐ
       - アメーバブログ
       - アメーバblog
+    specs:
+      - from: あめーばぶろぐ
+        to: Amebaブログ
+      - from: アメーバブログ
+        to: Amebaブログ
+      - from: アメーバblog
+        to: Amebaブログ
   
   - expected: アメブロ
     pattern: /ameblo/i
+    specs:
+      - from: ameblo
+        to: アメブロ
+      - from: AMEBLO
+        to: アメブロ
 
   - expected: 芸能人・有名人ブログ
     patterns:
       - オフィシャルブログ
       - 著名人ブログ
       - 有名人ブログ
+    specs:
+      - from: オフィシャルブログ
+        to: 芸能人・有名人ブログ
+      - from: 著名人ブログ
+        to: 芸能人・有名人ブログ
+      - from: 有名人ブログ
+        to: 芸能人・有名人ブログ
   
   - expected: 公式トップブロガー
     pattern: トップブロガー
+    specs:
+      - from: トップブロガー
+        to: 公式トップブロガー
 
   - expected: ABEMA
     patterns:
       - AmebaTV
       - あべま
       - アベマ
+    specs:
+      - from: AmebaTV
+        to: ABEMA
+      - from: あべま
+        to: ABEMA
+      - from: アベマ
+        to: ABEMA
 
   - expected: Ownd
     patterns:
       - ownd
       - オウンド
+    specs:
+      - from: ownd
+        to: Ownd
+      - from: オウンド
+        to: Ownd
 
   - expected: REQU
     patterns:
       - requ
       - リキュウ
+    specs:
+      - from: requ
+        to: REQU
+      - from: リキュウ
+        to: REQU
 
   - expected: Ameba Pay
     patterns: 
       - ameba pay
       - アメペイ
+    specs:
+      - from: ameba pay
+        to: Ameba Pay
+      - from: アメペイ
+        to: Ameba Pay
 
   - expected: ドットマネー
     patterns: 
       - ドマネ
       - どまね
+    specs:
+      - from: ドマネ
+        to: ドットマネー
+      - from: どまね
+        to: ドットマネー
