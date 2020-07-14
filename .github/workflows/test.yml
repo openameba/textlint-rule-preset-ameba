@@ -20,6 +20,6 @@ jobs:
           path: ${{ steps.npm-cache.outputs.dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-              ${{ runner.os }}-npm-
+              ${{ runner.os }}-node-
       - run: npm ci
       - run: npm test
