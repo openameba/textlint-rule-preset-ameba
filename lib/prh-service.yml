@@ -2,13 +2,15 @@ version: 1
 
 rules:
   - expected: アメーバID
-    pattern:  /amebaid/i
+    pattern:  /ameba\s?id/i
     specs:
       - from: amebaid
         to: アメーバID
       - from: AMEBAID
         to: アメーバID
-    
+      - from: Ameba ID
+        to: アメーバID
+
   - expected: Ameba
     pattern: /アメーバ(id)?/i
     regexpMustEmpty: $1
