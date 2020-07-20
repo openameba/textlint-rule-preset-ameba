@@ -2,13 +2,17 @@ version: 1
 
 rules:
   - expected: アメーバID
-    pattern:  /ameba\s?id/i
+    pattern:  /(ameba|アメーバ|あめーば)\s?id/i
     specs:
       - from: amebaid
         to: アメーバID
       - from: AMEBAID
         to: アメーバID
       - from: Ameba ID
+        to: アメーバID
+      - from: アメーバ ID
+        to: アメーバID
+      - from: あめーば ID
         to: アメーバID
 
   - expected: Ameba
