@@ -2,25 +2,39 @@ version: 1
 
 rules:
   - expected: アメーバID
-    pattern:  /amebaid/i
+    pattern:  /(ameba|アメーバ|あめーば)\s?id/i
     specs:
       - from: amebaid
         to: アメーバID
       - from: AMEBAID
         to: アメーバID
+      - from: Ameba ID
+        to: アメーバID
+      - from: アメーバ ID
+        to: アメーバID
+      - from: あめーば ID
+        to: アメーバID
 
-  - expected: Amebaブログ
-    patterns:
-      - あめーばぶろぐ
-      - アメーバブログ
-      - アメーバblog
+  - expected: Ameba
+    pattern: /アメーバ(id)?/i
+    regexpMustEmpty: $1
     specs:
-      - from: あめーばぶろぐ
-        to: Amebaブログ
+      - from: アメーバ
+        to: Ameba
+      - from: アメーバID
+        to: アメーバID
       - from: アメーバブログ
         to: Amebaブログ
-      - from: アメーバblog
-        to: Amebaブログ
+      - from: アメーバニュース
+        to: Amebaニュース
+      - from: アメーバアプリ
+        to: Amebaアプリ
+
+  - expected: Ameba
+    pattern: あめーば
+    specs:
+      - from: あめーば
+        to: Ameba
   
   - expected: アメブロ
     pattern: /ameblo/i
@@ -44,10 +58,13 @@ rules:
         to: 芸能人・有名人ブログ
   
   - expected: 公式トップブロガー
-    pattern: トップブロガー
+    pattern:  /(公式)?トップブロガー/
+    regexpMustEmpty: $1
     specs:
       - from: トップブロガー
         to: 公式トップブロガー
+      - from: Ameba公式トップブロガー
+        to: Ameba公式トップブロガー
 
   - expected: ABEMA
     patterns:
