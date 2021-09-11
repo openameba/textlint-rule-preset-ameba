@@ -2,7 +2,7 @@ version: 1
 
 rules:
   - expected: アメーバID
-    pattern:  /(ameba|アメーバ|あめーば)\s?id/i
+    pattern: /(ameba|アメーバ|あめーば)\s?id/i
     specs:
       - from: amebaid
         to: アメーバID
@@ -35,7 +35,7 @@ rules:
     specs:
       - from: あめーば
         to: Ameba
-  
+
   - expected: アメブロ
     pattern: /ameblo/i
     specs:
@@ -56,9 +56,9 @@ rules:
         to: 芸能人・有名人ブログ
       - from: 有名人ブログ
         to: 芸能人・有名人ブログ
-  
+
   - expected: 公式トップブロガー
-    pattern:  /(公式)?トップブロガー/
+    pattern: /(公式)?トップブロガー/
     regexpMustEmpty: $1
     specs:
       - from: トップブロガー
@@ -100,7 +100,7 @@ rules:
         to: REQU
 
   - expected: Ameba Pay
-    patterns: 
+    patterns:
       - ameba pay
       - アメペイ
     specs:
@@ -110,7 +110,7 @@ rules:
         to: Ameba Pay
 
   - expected: ドットマネー
-    patterns: 
+    patterns:
       - ドマネ
       - どまね
     specs:
@@ -118,3 +118,16 @@ rules:
         to: ドットマネー
       - from: どまね
         to: ドットマネー
+
+  - expected: Amebaマンガ
+    patterns:
+      - Ameba漫画
+      - アメーバ漫画
+      - アメーバマンガ
+    specs:
+      - from: Ameba漫画
+        to: Amebaマンガ
+      - from: アメーバ漫画
+        to: Amebaマンガ
+      - from: アメーバマンガ
+        to: Amebaマンガ
