@@ -118,3 +118,16 @@ rules:
         to: ドットマネー
       - from: どまね
         to: ドットマネー
+
+  - expected: Amebaマンガ
+    patterns:
+      - Ameba漫画
+      - アメーバ漫画
+      - アメーバマンガ
+    specs:
+      - from: Ameba漫画
+        to: Amebaマンガ
+      - from: アメーバ漫画
+        to: Amebaマンガ
+      - from: アメーバマンガ
+        to: Amebaマンガ
