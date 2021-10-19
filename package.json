@@ -4,8 +4,11 @@
   "description": "textlint rule preset for Ameba",
   "main": "lib/textlint-rule-preset-ameba.js",
   "scripts": {
-    "test": "textlint example/ameba.md",
-    "lint": "yamllint lib/*.yml .github/workflows/*.yml"
+    "test": "run-p lint:* format",
+    "lint:yaml": "yamllint lib/*.yml .github/workflows/*.yml",
+    "lint:text": "textlint example/ameba.md",
+    "format": "npx prettier --check .",
+    "fix": "npx prettier --write ."
   },
   "author": "Ameba Developers",
   "license": "MIT",
@@ -40,6 +43,8 @@
     "textlint-rule-prh": "^5.3.0"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.1",
     "textlint": "^11.6.3",
     "yaml-lint": "^1.2.4"
   }
