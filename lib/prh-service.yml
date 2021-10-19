@@ -25,8 +25,6 @@ rules:
         to: アメーバID
       - from: アメーバブログ
         to: Amebaブログ
-      - from: アメーバニュース
-        to: Amebaニュース
       - from: アメーバアプリ
         to: Amebaアプリ
 
@@ -131,3 +129,13 @@ rules:
         to: Amebaマンガ
       - from: アメーバマンガ
         to: Amebaマンガ
+
+  - expected: AmebaNews
+    patterns:
+      - Amebaニュース
+      - アメーバニュース
+    specs:
+      - from: Amebaニュース
+        to: AmebaNews
+      - from: アメーバニュース
+        to: AmebaNews
