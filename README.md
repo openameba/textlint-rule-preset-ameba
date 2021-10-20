@@ -29,7 +29,7 @@ CLI、Node module、エディタ内など様々な方法で利用できます。
 ```json
 {
   "rules": {
-    "preset-ameba": true
+    "@openameba/preset-ameba": true
   }
 }
 ```
