@@ -1,14 +1,16 @@
 name: publish
 
 on:
-  push:
-    branches:
-      - publish
-      - publish/dry-run
+  workflow_dispatch:
+    inputs:
+      opts:
+        description: 'input empty string if you want to publish, otherwise run with --dry-run'
+        required: false
+        default: '--dry-run'
 
 jobs:
-  version:
-    name: version
+  publish:
+    name: publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,9 +21,5 @@ jobs:
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
           npm whoami
-      - name: Dry run
-        run: npm publish --dry-run
-        if: github.ref == 'refs/heads/publish/dry-run'
       - name: Publish
-        run: npm publish
-        if: github.ref == 'refs/heads/publish'
+        run: npm publish ${{ github.event.inputs.opts }}
