@@ -1,0 +1,41 @@
+name: versioning
+
+on:
+  push:
+    branches:
+      - version/major
+      - version/minor
+      - version/patch
+      - version/premajor
+      - version/preminor
+      - version/prepatch
+      - version/prerelease
+
+jobs:
+  version:
+    name: version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+      - name: Set git user
+        run: |
+          git config --global user.email "<>"
+          git config --global user.name "openameba"
+      - name: Extract branch from git ref
+        run: |
+          echo "::set-output name=name::${GITHUB_REF#refs/*/}"
+          echo "::set-output name=version::${GITHUB_REF##*/}"
+        id: extract_branch
+      - run: npm version ${{ steps.extract_branch.outputs.version }}
+      - run: git push --tags
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          delete-branch: true
+          commit-message: 'chore: update version'
+          title: 'chore: update version'
+          body: ''

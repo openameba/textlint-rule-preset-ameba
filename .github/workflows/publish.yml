@@ -1,0 +1,27 @@
+name: publish
+
+on:
+  push:
+    branches:
+      - publish
+      - publish/dry-run
+
+jobs:
+  version:
+    name: version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+      - name: Log in to npm
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          npm whoami
+      - name: Dry run
+        run: npm publish --dry-run
+        if: github.ref == 'refs/heads/publish/dry-run'
+      - name: Publish
+        run: npm publish
+        if: github.ref == 'refs/heads/publish'
