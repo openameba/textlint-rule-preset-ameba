@@ -1,15 +1,12 @@
 name: versioning
 
 on:
-  push:
-    branches:
-      - version/major
-      - version/minor
-      - version/patch
-      - version/premajor
-      - version/preminor
-      - version/prepatch
-      - version/prerelease
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'should be a valid semver string to semver.inc (one of patch, minor, major, prepatch, preminor, premajor, prerelease).'
+        required: true
+        default: 'minor'
 
 jobs:
   version:
@@ -24,12 +21,7 @@ jobs:
         run: |
           git config --global user.email "<>"
           git config --global user.name "openameba"
-      - name: Extract branch from git ref
-        run: |
-          echo "::set-output name=name::${GITHUB_REF#refs/*/}"
-          echo "::set-output name=version::${GITHUB_REF##*/}"
-        id: extract_branch
-      - run: npm version ${{ steps.extract_branch.outputs.version }}
+      - run: npm version ${{ github.event.inputs.version }}
       - run: git push --tags
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
