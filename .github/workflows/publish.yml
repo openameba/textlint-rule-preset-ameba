@@ -3,7 +3,7 @@ name: publish
 on:
   workflow_dispatch:
     inputs:
-      opts:
+      dryRun:
         description: 'dry run'
         required: false
         type: boolean
@@ -23,4 +23,4 @@ jobs:
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
           npm whoami
       - name: Publish
-        run: npm publish --dry-run=${{ github.event.inputs.opts }}
+        run: npm publish --dry-run=${{ github.event.inputs.dryRun }}
