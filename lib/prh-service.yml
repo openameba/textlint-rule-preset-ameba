@@ -87,16 +87,6 @@ rules:
       - from: オウンド
         to: Ownd
 
-  - expected: REQU
-    patterns:
-      - requ
-      - リキュウ
-    specs:
-      - from: requ
-        to: REQU
-      - from: リキュウ
-        to: REQU
-
   - expected: Ameba Pay
     patterns:
       - ameba pay
