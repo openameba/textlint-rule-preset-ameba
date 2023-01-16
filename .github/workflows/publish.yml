@@ -4,9 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       opts:
-        description: 'input empty string if you want to publish, otherwise run with --dry-run'
+        description: 'dry run'
         required: false
-        default: '--dry-run'
+        type: boolean
+        default: true
 
 jobs:
   publish:
@@ -22,4 +23,4 @@ jobs:
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
           npm whoami
       - name: Publish
-        run: npm publish ${{ github.event.inputs.opts }}
+        run: npm publish --dry-run=${{ github.event.inputs.opts }}
