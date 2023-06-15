@@ -33,3 +33,14 @@ CLI、Node module、エディタ内など様々な方法で利用できます。
   }
 }
 ```
+
+## Release
+
+1. リリース対象の成果物を `main` ブランチにマージします
+2. GitHub Actionsの[versioning](https://github.com/openameba/textlint-rule-preset-ameba/actions/workflows/version.yml)
+    1. 「Run workflow」からアップデートするバージョンを記載のジョブを実行
+    2. package.jsonのversionがアップデートされ自動的にPull requestが作成されます
+    3. バージョンアップのPull requestを `main` ブランチにマージ
+3. GitHub Actionsの[publish](https://github.com/openameba/textlint-rule-preset-ameba/actions/workflows/publish.yml)より「dry run」にチェックを入れた状態でジョブを実行
+4. 「dry run」のジョブが成功したら「dry run」のチェックボックスを外してジョブを実行
+5. リリース完了
