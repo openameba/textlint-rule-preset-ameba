@@ -43,4 +43,6 @@ CLI、Node module、エディタ内など様々な方法で利用できます。
     3. バージョンアップのPull requestを `main` ブランチにマージ
 3. GitHub Actionsの[publish](https://github.com/openameba/textlint-rule-preset-ameba/actions/workflows/publish.yml)より「dry run」にチェックを入れた状態でジョブを実行
 4. 「dry run」のジョブが成功したら「dry run」のチェックボックスを外してジョブを実行
-5. リリース完了
+5. リリースが完了したら[Releases](https://github.com/openameba/textlint-rule-preset-ameba/releases)の「Draft a new release」からリリースノートを作成しましょう
+    1. 対象のリリースバージョンを選択後、「Generate release notes」ボタンを押して「Publish release」します
+6. リリース作業完了となります
