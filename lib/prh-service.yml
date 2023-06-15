@@ -35,13 +35,11 @@ rules:
         to: Ameba
 
   - expected: Amebaブログ
-    pattern: /(ameblo|アメブロ)/i
+    pattern: /ameblo/i
     specs:
       - from: ameblo
         to: Amebaブログ
       - from: AMEBLO
-        to: Amebaブログ
-      - from: アメブロ
         to: Amebaブログ
 
   - expected: 芸能人・有名人ブログ
