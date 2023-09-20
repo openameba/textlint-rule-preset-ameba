@@ -148,3 +148,9 @@ rules:
         to: AmebaNews
       - from: アメーバニュース
         to: AmebaNews
+
+  - expected: つくる、つむぐ、つづく、
+    pattern: つくる、つむぐ、つづく
+    specs:
+      - from: つくる、つむぐ、つづく
+        to: つくる、つむぐ、つづく、
