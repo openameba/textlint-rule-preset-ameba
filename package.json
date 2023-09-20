@@ -24,6 +24,7 @@
     "@textlint-ja/textlint-rule-no-insert-re": "^1.0.0",
     "@textlint-ja/textlint-rule-no-synonyms": "^1.1.0",
     "sudachi-synonyms-dictionary": "^5.0.1",
+    "textlint-filter-rule-allowlist": "^4.0.0",
     "textlint-rule-ja-nakaguro-or-halfwidth-space-between-katakana": "^2.0.1",
     "textlint-rule-ja-no-abusage": "^2.0.1",
     "textlint-rule-ja-no-mixed-period": "^2.1.1",

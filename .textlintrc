@@ -1,8 +1,15 @@
 {
-  "rules" : {
-    "prh" : {
+  "rules": {
+    "prh": {
       "rulePaths": [
         "./lib/prh-ameba.yml"
+      ]
+    }
+  },
+  "filters": {
+    "allowlist": {
+      "allowlistConfigPaths": [
+        "./lib/allow-ameba.yml"
       ]
     }
   }
