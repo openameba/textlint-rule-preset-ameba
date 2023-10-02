@@ -156,7 +156,7 @@ rules:
         to: つくる、つむぐ、つづく、
         
   - expected: 次のページ
-    patterns:
+    patterns: /次(の)?ページ(へ)?/
       - 次ページ
       - 次ページへ
       - 次のページへ
@@ -169,9 +169,7 @@ rules:
         to: 次のページ
         
   - expected: 次へ
-    patterns:
-      - 次
-      - NEXT
+    patterns: /(次|Next)/
     specs:
       - from: 次
         to: 次へ
@@ -179,10 +177,7 @@ rules:
         to: 次へ
 
   - expected: 前のページ
-    patterns:
-      - 前ページ
-      - 前ページへ
-      - 前のページへ
+    patterns: /前(の)?ページ(へ)?/
     specs:
       - from: 前ページ
         to: 前のページ
@@ -192,9 +187,7 @@ rules:
         to: 前のページ
         
   - expected: 前へ
-    patterns:
-      - 前
-      - Previous
+    patterns: /(前|Previous)/
     specs:
       - from: 前
         to: 前へ
