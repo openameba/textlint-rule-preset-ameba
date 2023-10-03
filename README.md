@@ -34,6 +34,27 @@ CLI、Node module、エディタ内など様々な方法で利用できます。
 }
 ```
 
+### Allow List
+
+[Release v0.5.0](https://github.com/openameba/textlint-rule-preset-ameba/releases/tag/v0.5.0)よりAmebaのVisionにある「つくる、つむぐ、つづく、」が追加されました。
+textlintでは読点の最大数を設定しており、バリデーションから除外すること推奨しています。
+
+利用者側で下記のように`.textlintrc`を拡張してください。
+
+```json
+{
+  "rules": {},
+  "filters": {
+    "allowlist": {
+      "allowlistConfigPaths": [
+        "./node_modules/@openameba/textlint-rule-preset-ameba/lib/allow-ameba.yml"
+      ]
+    }
+  }
+}
+```
+
+
 ## Release
 
 1. リリース対象の成果物を `main` ブランチにマージします
