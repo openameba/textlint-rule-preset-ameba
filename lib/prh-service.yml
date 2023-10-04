@@ -42,24 +42,27 @@ rules:
       - from: AMEBLO
         to: Amebaブログ
 
-  - expected: AmebaLIFE
+  - expected: Ameba LIFE
     pattern:
+      - AmebaLIFE
       - AmebaLife
       - Ameba Life
       - Ameba life
       - Amebaライフ
       - Ameba ライフ
     specs:
+      - from: AmebaLIFE
+        to: Ameba LIFE
       - from: AmebaLife
-        to: AmebaLIFE
+        to: Ameba LIFE
       - from: Ameba Life
-        to: AmebaLIFE
+        to: Ameba LIFE
       - from: Ameba life
-        to: AmebaLIFE
+        to: Ameba LIFE
       - from: Amebaライフ
-        to: AmebaLIFE
+        to: Ameba LIFE
       - from: Ameba ライフ
-        to: AmebaLIFE
+        to: Ameba LIFE
 
   - expected: 芸能人・有名人ブログ
     patterns:
