@@ -2,4 +2,3 @@ version: 1
 
 imports:
   - prh-service.yml
-  - prh-business.yml

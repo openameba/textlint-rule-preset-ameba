@@ -64,6 +64,16 @@ rules:
       - from: Ameba ライフ
         to: Ameba LIFE
 
+  - expected: AmebaLIFE事業本部
+    pattern:
+      - Ameba LIFE事業本部
+      - Ameba Life事業本部
+    specs:
+      - from: Ameba LIFE事業本部
+        to: AmebaLIFE事業本部
+      - from: Ameba Life事業本部
+        to: AmebaLIFE事業本部
+
   - expected: 芸能人・有名人ブログ
     patterns:
       - オフィシャルブログ
