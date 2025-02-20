@@ -42,6 +42,28 @@ rules:
       - from: AMEBLO
         to: Amebaブログ
 
+  - expected: AmebaLIFE事業本部
+    pattern:
+      - Ameba LIFE事業本部
+      - AmebaLife事業本部
+      - Ameba Life事業本部
+      - Ameba life事業本部
+      - Amebaライフ事業本部
+      - Ameba ライフ事業本部
+    specs:
+      - from: Ameba LIFE事業本部
+        to: AmebaLIFE事業本部
+      - from: AmebaLife事業本部
+        to: AmebaLIFE事業本部
+      - from: Ameba Life事業本部
+        to: AmebaLIFE事業本部
+      - from: Ameba life事業本部
+        to: AmebaLIFE事業本部
+      - from: Amebaライフ事業本部
+        to: AmebaLIFE事業本部
+      - from: Ameba ライフ事業本部
+        to: AmebaLIFE事業本部
+
   - expected: Ameba LIFE
     pattern:
       - AmebaLIFE
