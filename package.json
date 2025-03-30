@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "npm-run-all2": "5.0.2",
-    "prettier": "^2.4.1",
+    "prettier": "2.4.1",
     "textlint": "^11.9.1",
     "yaml-lint": "^1.2.4"
   }
