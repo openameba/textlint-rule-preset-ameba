@@ -157,3 +157,42 @@ rules:
     specs:
       - from: つくる、つむぐ、つづく
         to: つくる、つむぐ、つづく、
+        
+  - expected: 次のページ
+    patterns: /次(の)?ページ(へ)?/
+      - 次ページ
+      - 次ページへ
+      - 次のページへ
+    specs:
+      - from: 次ページ
+        to: 次のページ
+      - from: 次ページへ
+        to: 次のページ
+      - from: 次のページへ
+        to: 次のページ
+        
+  - expected: 次へ
+    patterns: /(次|Next)/
+    specs:
+      - from: 次
+        to: 次へ
+      - from: Next
+        to: 次へ
+
+  - expected: 前のページ
+    patterns: /前(の)?ページ(へ)?/
+    specs:
+      - from: 前ページ
+        to: 前のページ
+      - from: 前ページへ
+        to: 前のページ
+      - from: 前のページへ
+        to: 前のページ
+        
+  - expected: 前へ
+    patterns: /(前|Previous)/
+    specs:
+      - from: 前
+        to: 前へ
+      - from: Previous
+        to: 前へ
