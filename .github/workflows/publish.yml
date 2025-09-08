@@ -1,13 +1,9 @@
 name: publish
 
 on:
-  workflow_dispatch:
-    inputs:
-      dryRun:
-        description: 'dry run'
-        required: false
-        type: boolean
-        default: true
+  push:
+    branches:
+      - ci/release
 
 permissions:
   id-token: write # Required for OIDC
@@ -26,4 +22,4 @@ jobs:
       # Ensure npm 11.5.1 or later is installed
       - name: Update npm
         run: npm install -g npm@latest
-      - run: npm publish --dry-run=${{ github.event.inputs.dryRun }}
+      - run: npm publish --tag beta
