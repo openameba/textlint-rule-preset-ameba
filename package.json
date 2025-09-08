@@ -2,6 +2,10 @@
   "name": "@openameba/textlint-rule-preset-ameba",
   "version": "0.5.2-0",
   "description": "textlint rule preset for Ameba",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openameba/textlint-rule-preset-ameba"
+  },
   "main": "lib/textlint-rule-preset-ameba.js",
   "scripts": {
     "test": "run-p lint:* format",
